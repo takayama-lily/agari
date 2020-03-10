@@ -1,0 +1,27 @@
+{
+  "name": "agari",
+  "version": "0.0.0",
+  "description": "riichi mahjong (JP) agari calculation",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takayama-lily/agari.git"
+  },
+  "keywords": [
+    "riichi",
+    "mahjong",
+    "agari",
+    "hand",
+    "calculation",
+    "japan"
+  ],
+  "author": "takayama <takayama@foxmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/takayama-lily/agari/issues"
+  },
+  "homepage": "https://github.com/takayama-lily/agari#readme"
+}
