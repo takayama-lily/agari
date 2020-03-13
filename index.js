@@ -6,7 +6,7 @@ const sum = (arr)=>{
         s += arr[i]
     return s
 }
-const check7 = (haiArr)=>{ //七対子形
+const check7 = (haiArr)=>{
     let arr = haiArr[0].concat(haiArr[1]).concat(haiArr[2]).concat(haiArr[3])
     let s = 0
     for (let i in arr) {
@@ -15,11 +15,11 @@ const check7 = (haiArr)=>{ //七対子形
     }
     return s == 14
 }
-const check13 = (haiArr)=>{ //国士形
+const check13 = (haiArr)=>{
     let arr = [haiArr[0][0], haiArr[0][8], haiArr[1][0], haiArr[1][8], haiArr[2][0], haiArr[2][8]].concat(haiArr[3])
     return arr.indexOf(0) == -1 && sum(arr) == 14
 }
-const check = (haiArr)=>{ //一般形
+const check = (haiArr)=>{
     const _check = (e, isJihai = false)=>{
         let arr = e.concat()
         if (!sum(arr))
@@ -79,7 +79,7 @@ const findAllAgariPatterns = (haiArr)=>{
             s += sum(arr)
         return s
     }
-    const findKotus = (haiArr)=>{
+    const findKotsu = (haiArr)=>{
         let res = []
         for (let i in haiArr) {
             i = parseInt(i)
@@ -135,7 +135,7 @@ const findAllAgariPatterns = (haiArr)=>{
     }
     const calc = (haiArr, j)=> {
         let tmpHaiArr = JSON.parse(JSON.stringify(haiArr))
-        let firstRes = findKotus(tmpHaiArr).concat(j)
+        let firstRes = findKotsu(tmpHaiArr).concat(j)
         if (sumAll(tmpHaiArr) === 2) {
             res.push(firstRes.sort())
         } else if (firstRes.length > 0) {
@@ -147,7 +147,7 @@ const findAllAgariPatterns = (haiArr)=>{
         if (sumAll(tmpHaiArr) === 2) {
             res.push(secondRes.sort())
         } else {
-            secondRes = secondRes.concat(findKotus(tmpHaiArr))
+            secondRes = secondRes.concat(findKotsu(tmpHaiArr))
             res.push(secondRes.sort())
         }
     }
@@ -196,8 +196,8 @@ const findAllAgariPatterns = (haiArr)=>{
     }
     return finalRes
 }
-module.exports = findAllAgariPatterns
-module.exports.check = check
-module.exports.check7 = check7
-module.exports.check13 = check13
-module.exports.checkAll = checkAll
+module.exports = findAllAgariPatterns //一般形限定
+module.exports.check = check //一般形
+module.exports.check7 = check7 //七対子形
+module.exports.check13 = check13 //国士形
+module.exports.checkAll = checkAll //全部形

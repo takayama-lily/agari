@@ -1,11 +1,11 @@
 ## Agari
-Riichi Mahjong hand agari calculation
+麻雀アガリ和了形計算  
+Japanese riichi mahjong hand agari calculation  
 
 **Install with npm:**
 ```
 $ npm i agari
 ```
-
 **Usage:**
 ```js
 const agari = require('agari')
@@ -17,30 +17,34 @@ let haiArr = [
 ]
 console.log(agari(haiArr))
 ```
-You will get an array result includes all the patterns of agari:
+Output:
 ```js
 [
     [
         '1m', //雀頭
         [ '1m', '2m', '3m' ], //順子
-        [ '1p' ], //暗刻
-        [ '1s' ], //暗刻
-        [ '4m' ]  //暗刻
+        [ '1p' ], //刻子
+        [ '1s' ], //刻子
+        [ '4m' ]  //刻子
     ],
     [
-        [ '1m' ], //暗刻
-        [ '1p' ], //暗刻
-        [ '1s' ], //暗刻
+        [ '1m' ], //刻子
+        [ '1p' ], //刻子
+        [ '1s' ], //刻子
         [ '2m', '3m', '4m' ], //順子
         '4m' //雀頭
     ]
 ]
 ```
-"m,p,s,z" means "萬子,筒子,索子,字牌"
+You will get an array result includes all the patterns of the agari.  
+"m,p,s,z" means "萬子,筒子,索子,字牌"  
+"1z-7z" means "東南西北白發中"
 
-**Only check true or false:**
+**Check only:**
 ```js
-//check 一般型
+const agari = require('agari')
+
+//check 一般形
 agari.check([
     [3,1,1,1,2,1,1,1,3],
     [0,0,0,0,0,0,0,0,0],
@@ -48,7 +52,7 @@ agari.check([
     [0,0,0,0,0,0,0]
 ]) //return true
 
-//check7 七対子型
+//check7 七対子形
 agari.check7([
     [2,0,2,2,2,2,2,0,2],
     [0,0,0,0,0,0,0,0,0],
@@ -56,12 +60,12 @@ agari.check7([
     [0,0,0,0,0,0,0]
 ]) //return true
 
-//check13 国士型
+//check13 国士形
 agari.check13([
     [1,0,0,0,0,0,0,0,1],
     [1,0,0,0,0,0,0,0,1],
     [1,0,0,0,0,0,0,0,1],
-    [1,1,1,1,2,1,1,1]
+    [1,1,1,1,2,1,1]
 ]) //return true
 
 //check all types
