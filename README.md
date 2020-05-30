@@ -1,4 +1,4 @@
-## Agari
+# **Agari**
 
 麻雀アガリ和了形計算  
 Japanese riichi mahjong hand agari calculation  
@@ -12,7 +12,7 @@ Japanese riichi mahjong hand agari calculation
 **Use in browser:**
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/agari/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/agari"></script>
 ```
 
 **Usage:**
