@@ -1,7 +1,7 @@
 {
   "name": "agari",
-  "version": "0.0.1",
-  "description": "Japanese riichi mahjong hand agari calculation",
+  "version": "1.0.0",
+  "description": "Japanese riichi mahjong agari calculation",
   "main": "index.js",
   "scripts": {
     "test": "node ./test.js"
@@ -13,10 +13,7 @@
   "keywords": [
     "riichi",
     "mahjong",
-    "agari",
-    "hand",
-    "calculation",
-    "Japan"
+    "agari"
   ],
   "author": "takayama <takayama@foxmail.com>",
   "license": "MIT",

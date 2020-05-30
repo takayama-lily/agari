@@ -1,7 +1,7 @@
 'use strict'
 const assert = require('assert')
 const agari = require('./index')
-const testCases = [
+const test_cases = [
     [
         [2,2,0,2,0,0,2,2,2],
         [0,0,2,0,0,0,0,0,0],
@@ -28,35 +28,35 @@ const testCases = [
     ]
 ]
 
-assert.deepStrictEqual(agari.check(testCases[0]), false)
-assert.deepStrictEqual(agari.check(testCases[1]), false)
-assert.deepStrictEqual(agari.check(testCases[2]), true)
-assert.deepStrictEqual(agari.check(testCases[3]), true)
+assert.deepStrictEqual(agari.check(test_cases[0]), false)
+assert.deepStrictEqual(agari.check(test_cases[1]), false)
+assert.deepStrictEqual(agari.check(test_cases[2]), true)
+assert.deepStrictEqual(agari.check(test_cases[3]), true)
 
-assert.deepStrictEqual(agari.check7(testCases[0]), true)
-assert.deepStrictEqual(agari.check7(testCases[1]), false)
-assert.deepStrictEqual(agari.check7(testCases[2]), false)
-assert.deepStrictEqual(agari.check7(testCases[3]), true)
+assert.deepStrictEqual(agari.check7(test_cases[0]), true)
+assert.deepStrictEqual(agari.check7(test_cases[1]), false)
+assert.deepStrictEqual(agari.check7(test_cases[2]), false)
+assert.deepStrictEqual(agari.check7(test_cases[3]), true)
 
-assert.deepStrictEqual(agari.check13(testCases[0]), false)
-assert.deepStrictEqual(agari.check13(testCases[1]), true)
-assert.deepStrictEqual(agari.check13(testCases[0]), false)
-assert.deepStrictEqual(agari.check13(testCases[1]), true)
+assert.deepStrictEqual(agari.check13(test_cases[0]), false)
+assert.deepStrictEqual(agari.check13(test_cases[1]), true)
+assert.deepStrictEqual(agari.check13(test_cases[0]), false)
+assert.deepStrictEqual(agari.check13(test_cases[1]), true)
 
-assert.deepStrictEqual(agari.checkAll(testCases[0]), true)
-assert.deepStrictEqual(agari.checkAll(testCases[1]), true)
-assert.deepStrictEqual(agari.checkAll(testCases[0]), true)
-assert.deepStrictEqual(agari.checkAll(testCases[1]), true)
+assert.deepStrictEqual(agari.checkAll(test_cases[0]), true)
+assert.deepStrictEqual(agari.checkAll(test_cases[1]), true)
+assert.deepStrictEqual(agari.checkAll(test_cases[0]), true)
+assert.deepStrictEqual(agari.checkAll(test_cases[1]), true)
 
-assert.deepStrictEqual(agari(testCases[0]), [])
-assert.deepStrictEqual(agari(testCases[1]), [])
-assert.deepStrictEqual(agari(testCases[2]), [ [ '3s',
+assert.deepStrictEqual(agari(test_cases[0]), [])
+assert.deepStrictEqual(agari(test_cases[1]), [])
+assert.deepStrictEqual(agari(test_cases[2]), [ [ '3s',
 [ '6m', '7m', '8m' ],
 [ '6m', '7m', '8m' ],
 [ '6z' ],
 [ '7p', '8p', '9p' ] ] ])
 
-assert.deepStrictEqual(agari(testCases[3]), [ [ '1m',
+assert.deepStrictEqual(agari(test_cases[3]), [ [ '1m',
 [ '2m', '3m', '4m' ],
 [ '2m', '3m', '4m' ],
 [ '7m', '8m', '9m' ],

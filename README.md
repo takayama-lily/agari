@@ -1,25 +1,38 @@
 ## Agari
+
 麻雀アガリ和了形計算  
 Japanese riichi mahjong hand agari calculation  
 
 **Install with npm:**
+
+```shell
+# npm i agari
 ```
-$ npm i agari
+
+**Use in browser:**
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/agari/index.js"></script>
 ```
+
 **Usage:**
+
 ```js
 const agari = require('agari')
-let haiArr = [
+let hai = [
     [3,1,1,3,0,0,0,0,0], //萬子
     [3,0,0,0,0,0,0,0,0], //筒子
     [3,0,0,0,0,0,0,0,0], //索子
     [0,0,0,0,0,0,0]      //字牌
 ]
-console.log(agari(haiArr))
+console.log(agari(hai))
 ```
+
 Output:
+
 ```js
 [
+    //和了形1
     [
         '1m', //雀頭
         [ '1m', '2m', '3m' ], //順子
@@ -27,6 +40,7 @@ Output:
         [ '1s' ], //刻子
         [ '4m' ]  //刻子
     ],
+    //和了形2
     [
         [ '1m' ], //刻子
         [ '1p' ], //刻子
@@ -36,11 +50,12 @@ Output:
     ]
 ]
 ```
-You will get an array result includes all the patterns of the agari.  
+
 "m,p,s,z" means "萬子,筒子,索子,字牌"  
 "1z-7z" means "東南西北白發中"
 
 **Check only:**
+
 ```js
 const agari = require('agari')
 
@@ -70,7 +85,7 @@ agari.check13([
 
 //check all types
 agari.checkAll([
-    [0,0,0,0,0,0,0,0,0],
+    [1,1,1,1,1,0,0,0,0],
     [0,0,0,0,0,0,0,0,0],
     [0,0,0,0,0,0,0,0,0],
     [0,0,0,0,0,0,0]
