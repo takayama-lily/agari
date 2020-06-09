@@ -1,6 +1,6 @@
 {
   "name": "agari",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Japanese riichi mahjong agari calculation",
   "main": "index.js",
   "scripts": {

@@ -119,10 +119,10 @@
         }
         return res
     }
-    const findJyanto = (haiArr)=>{
+    const findJyanto = (hai_arr)=>{
         for (let i = 0; i < hai_arr.length; i++) {
             for (let ii = 0; ii < hai_arr[i].length; ii++) {
-                if (haiArr[i][ii] >= 2) {
+                if (hai_arr[i][ii] >= 2) {
                     return ii+1+MPSZ[i]
                 }
             }
